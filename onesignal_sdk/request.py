@@ -8,8 +8,8 @@ from .response import OneSignalResponse
 
 def _build_request_kwargs(token: str = None,
                           payload: Dict[str, Any] = None,
-                          params: Dict[str, Any] = None) -> Dict[str, Any],
-                          timeout: float = 30.0:
+                          params: Dict[str, Any] = None,
+                         timeout: float = 30.0) -> Dict[str, Any]:
     request_kwargs = {}
     if token is not None:
         request_kwargs['headers'] = {'Authorization': 'Basic {0}'.format(token)}
